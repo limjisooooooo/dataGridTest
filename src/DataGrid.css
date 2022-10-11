@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300;1,400;1,500;1,600&display=swap');
+
+.DataGrid {
+    margin: 2vw;    
+    border: 1px solid darkgray;
+    font-family: 'Poppins', sans-serif;
+}
+.DataGrid button{
+    margin: 0 .2vw;
+}
+.header {
+    display: flex;    
+    padding: 1vw 0;        
+    background: linear-gradient(#FFFFFF, #FAFAFA, #FFFFFF);
+}
+.Folding{
+    background: url('./icons/arrow_forward_ios.svg');
+    background-size: 1vw 1vw;
+    width: 1vw;
+    height: 1vw;
+    margin: 0 .5vw 0 0;
+    float: left;
+    transition: .2s;    
+}
+.Folding.clicked{
+    transform: rotate(90deg);
+    transition: .2s;
+}
+
+.Folding-col{
+    cursor: pointer;
+}
+.col {    
+    display: flex;
+    align-items: center;
+    flex:1;
+    padding: 0 2vw;
+    border-right: 1px solid darkgray;    
+}
+
+.col:last-child{
+    border-right: none;
+}
+.row {
+    display: flex;
+    padding: 1vw 0;
+    border-top: 1px solid darkgray;
+    transition: all .2s;    
+}
+.row.hidden>.col{
+    display: none;
+}
+.row.hidden{
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+    transition: all .2s;    
+    border: none;
+}
+.footer {
+    display: flex;
+    font-size: .9vw;
+    padding: .2vw 1vw;
+    background: linear-gradient(#FFFFFF, #FAFAFA, #FFFFFF);
+    font-style: italic;
+}
